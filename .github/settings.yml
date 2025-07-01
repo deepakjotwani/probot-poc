@@ -1,54 +1,41 @@
 repository:
-  # See https://docs.github.com/en/rest/reference/repos#update-a-repository for all available settings.
-  name: probot-poc
-  description: This repository is to implement settings via probot 
-  topics: github, probot
-  private: false
   default_branch: master
+  private: false
   allow_squash_merge: true
-  allow_merge_commit: true
-  allow_rebase_merge: true
-  delete_branch_on_merge: true
-  enable_automated_security_fixes: true
-  enable_vulnerability_alerts: true
+  allow_merge_commit: false
+  allow_rebase_merge: false
 
 branches:
-  - name: develop
-    # https://docs.github.com/en/rest/reference/repos#update-branch-protection
+  - name: master
     protection:
       required_pull_request_reviews:
         required_approving_review_count: 1
         dismiss_stale_reviews: true
-        require_code_owner_reviews: true
-        dismissal_restrictions:
-          users: []
-          teams: []
+        require_code_owner_reviews: false
+        dismissal_restrictions: {}
       required_status_checks:
         strict: true
         contexts: []
-      enforce_admins: true
+      enforce_admins: null
       required_linear_history: true
       restrictions:
-        apps: []
         users: []
+        apps: []
         teams: []
 
-  - name: master
-    # https://docs.github.com/en/rest/reference/repos#update-branch-protection
+  - name: develop
     protection:
       required_pull_request_reviews:
         required_approving_review_count: 1
         dismiss_stale_reviews: true
-        require_code_owner_reviews: true
-        dismissal_restrictions:
-          users: []
-          teams: []
+        require_code_owner_reviews: false
+        dismissal_restrictions: {}
       required_status_checks:
         strict: true
         contexts: []
-      enforce_admins: true
+      enforce_admins: null
       required_linear_history: true
       restrictions:
-        apps: []
         users: []
+        apps: []
         teams: []
