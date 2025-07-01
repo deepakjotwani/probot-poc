@@ -1,4 +1,16 @@
-# .github/probot.yml
+repository:
+  # See https://docs.github.com/en/rest/reference/repos#update-a-repository for all available settings.
+  name: probot-poc
+  description: This repository is to implement settings via probot 
+  topics: github, probot
+  private: true
+  default_branch: master
+  allow_squash_merge: true
+  allow_merge_commit: true
+  allow_rebase_merge: true
+  delete_branch_on_merge: true
+  enable_automated_security_fixes: true
+  enable_vulnerability_alerts: true
 
 branches:
   - name: master
