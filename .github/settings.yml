@@ -3,7 +3,7 @@ repository:
   name: probot-poc
   description: This repository is to implement settings via probot 
   topics: github, probot
-  private: true
+  private: false
   default_branch: master
   allow_squash_merge: true
   allow_merge_commit: true
